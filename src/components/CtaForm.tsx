@@ -35,9 +35,9 @@ export default function CtaForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid grid-cols-2 gap-x-10 gap-y-4"
+      className="px-4 md:px-0 md:grid md:grid-cols-2 md:gap-x-10"
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-4">
         <label className="pl-1 text-lg" htmlFor="cta-inp-name">Name*</label>
         <input
           className="outline-none p-2 border-2 border-white bg-background-secondary"
@@ -47,7 +47,7 @@ export default function CtaForm() {
         <p className="text-red-700">{errors.name?.message}</p>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-4">
         <label className="pl-1 text-lg" htmlFor="cta-inp-email">Email*</label>
         <input
           className="outline-none p-2 border-2 border-white bg-background-secondary"
@@ -57,7 +57,7 @@ export default function CtaForm() {
         <p className="text-red-700">{errors.email?.message}</p>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-4">
         <label className="pl-1 text-lg" htmlFor="cta-inp-phone">Phone</label>
         <input
           className="outline-none p-2 border-2 border-white bg-background-secondary"
@@ -67,7 +67,7 @@ export default function CtaForm() {
         <p className="text-red-700">{errors.phone?.message}</p>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-4">
         <label className="pl-1 text-lg" htmlFor="cta-inp-website">Website</label>
         <input
           className="outline-none p-2 border-2 border-white bg-background-secondary"
@@ -77,7 +77,7 @@ export default function CtaForm() {
         <p className="text-red-700">{errors.website?.message}</p>
       </div>
 
-      <div className="flex flex-col col-span-2">
+      <div className="flex flex-col mt-4 col-span-2">
         <label className="pl-1 text-lg" htmlFor="cta-inp-about">Tell me about your project*</label>
         <textarea
           className="outline-none p-2 border-2 border-white bg-background-secondary"
@@ -88,7 +88,7 @@ export default function CtaForm() {
         <p className="text-red-700">{errors.about?.message}</p>
       </div>
 
-      <div className="col-span-2 flex justify-center">
+      <div className="col-span-2 flex justify-center mt-4">
         <button className="py-2 px-6 mb-[8px] border border-border-default hover:bg-[#8800b840] hover:border-2 hover:mb-[6px]" type="submit">Submit</button>
       </div>
     </form>
