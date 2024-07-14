@@ -1,13 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { mulish, sourceSans } from "./fonts";
+import { sourceSans } from "./fonts";
 import Image from "next/image";
 import Header from "../components/Header";
 
 export const metadata: Metadata = {
   title: "Freelance Software Developer | Pramuditha Chamikara",
-  description: "Web and Mobile Development",
+  description: "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
+  openGraph: {
+    title: 'Freelance Software Developer | Pramuditha Chamikara',
+    description: "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
+    url: 'https://chamikaratdp.com',
+    siteName: 'Pramuditha Chamikara',
+    images: [
+      {
+        url: 'https://chamikaratdp.com/images/Screenshot from 2024-05-07 00-02-11.v06.png', // Must be an absolute URL
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
+
 
 export default function RootLayout({
   children,
