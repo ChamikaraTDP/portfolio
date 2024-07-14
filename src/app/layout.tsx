@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://chamikaratdp.com/images/chamikaratdp-og.png', // Must be an absolute URL
+        width: 1184,
+        height: 546,
       },
     ],
     locale: 'en_US',
