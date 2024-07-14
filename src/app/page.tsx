@@ -178,7 +178,7 @@ export default function Home() {
             {services.map((srv) => (
               <div
                 key={srv.name}
-                className="bg-white shadow hover:shadow-[#DF5EFF80] w-full md:w-[300px] md:h-[500px] rounded-br-2xl py-6 md:py-10 px-10 text-left"
+                className="bg-white shadow hover:shadow-[#DF5EFF80] w-full md:w-[300px] rounded-br-2xl py-6 md:py-10 px-10 text-left"
               >
                 <div className="flex items-center md:flex-col md:items-start">
                   <div className="relative object-contain w-[60px] h-[60px] md:w-[80px] md:h-[80px]">
@@ -259,7 +259,7 @@ export default function Home() {
           let&apos;s get started!
         </h2>
 
-        <h3 className="text-xl md:text-2xl font-semibold text-title-primary mt-5">
+        <h3 className="text-xl md:text-2xl font-semibold text-title-primary mt-5 text-center">
           I would love the chance to work for you
         </h3>
 

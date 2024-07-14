@@ -25,29 +25,37 @@ export default function RootLayout({
         {children}
 
         <footer className="mt-24 py-10 px-6 md:p-10 bg-[#6C057D] text-text-white flex justify-center">
-          <div className="w-full md:w-1/2 flex justify-between">
-            <section className="">
+          <div className="w-full md:w-4/5 xl:w-1/2 flex justify-between">
+            <section className="pr-4">
               <div className="text-lg font-semibold">Pramuditha Chamikara</div>
               <div className="">
-                No. 41, Remunagoda,
+                472, Thalagala Junction,
                 <br />
-                Kalutara, Sri Lanka 12009
+                Kiriwattuduwa, Horana, Sri Lanka
               </div>
-              <div className="pt-2">Tel: +94 719939729</div>
-              <div className="pt-2">Email: chamikaratdp@gmail.com</div>
+              <div className="pt-2">
+                <a href="tel:+94719939729">Tel: +94 719939729</a>
+              </div>
+              <div className="pt-2">
+                <a href="mailto:chamikaratdp@gmail.com">
+                  Email: chamikaratdp@gmail.com
+                </a>
+              </div>
             </section>
 
             <section>
               <div className="font-semibold">You can find me on</div>
 
               <div className="flex mt-5">
-                <Image
-                  className="mr-4"
-                  src="/icons/twitter.png"
-                  alt="Twitter icon"
-                  width={25}
-                  height={25}
-                />
+                <a href="https://x.com/chamikaratdp" target="_blank">
+                  <Image
+                    className="mr-4"
+                    src="/icons/twitter.png"
+                    alt="Twitter icon"
+                    width={25}
+                    height={25}
+                  />
+                </a>
                 {/* <Image
                   className="mr-4"
                   src="/icons/facebook.png"
@@ -55,13 +63,15 @@ export default function RootLayout({
                   width={25}
                   height={25}
                 /> */}
-                <Image
-                  className="mr-4"
-                  src="/icons/instagram.png"
-                  alt="Instagram icon"
-                  width={25}
-                  height={25}
-                />
+                {/* <a href="" target="_blank">
+                  <Image
+                    className="mr-4"
+                    src="/icons/instagram.png"
+                    alt="Instagram icon"
+                    width={25}
+                    height={25}
+                  />
+                </a> */}
               </div>
             </section>
           </div>
