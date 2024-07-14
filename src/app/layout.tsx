@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: 'Pramuditha Chamikara',
     images: [
       {
-        url: 'https://chamikaratdp.com/images/Screenshot from 2024-05-07 00-02-11.v06.png', // Must be an absolute URL
+        url: 'https://chamikaratdp.com/images/chamikaratdp-og.png', // Must be an absolute URL
       },
     ],
     locale: 'en_US',
