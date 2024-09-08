@@ -1,16 +1,16 @@
-"use client";
-import { useEffect, useState } from "react";
-import { mulish, sourceSans } from "../app/fonts";
-import Image from "next/image";
+'use client';
+import { useEffect, useState } from 'react';
+import { mulish, sourceSans } from '../app/fonts';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    var body = document.getElementById("body-tdp");
+    var body = document.getElementById('body-tdp');
 
     if (!body) return;
-    
+
     if (isMenuOpen) {
       body.style.height = '100vh';
       body.style.overflow = 'hidden';
@@ -29,10 +29,7 @@ export default function Header() {
           <a className="hover:underline text-xl uppercase" href="/">
             home
           </a>
-          <a
-            className="hover:underline text-xl uppercase ml-8 lg:ml-16"
-            href="/blog"
-          >
+          <a className="hover:underline text-xl uppercase ml-8 lg:ml-16" href="/blog">
             blog
           </a>
         </div>
@@ -44,10 +41,7 @@ export default function Header() {
         </h2>
 
         <div className="hidden lg:block text-end w-1/4">
-          <a
-            className="hover:underline text-xl uppercase mr-5 lg:mr-10"
-            href="/about"
-          >
+          <a className="hover:underline text-xl uppercase mr-5 lg:mr-10" href="/about">
             about
           </a>
           <a
@@ -63,7 +57,9 @@ export default function Header() {
         </div>
       </nav>
 
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} z-[1000] absolute top-0 left-0 w-screen h-screen bg-[#3E0141] text-text-white`}>
+      <div
+        className={`${isMenuOpen ? 'block' : 'hidden'} z-[1000] absolute top-0 left-0 w-screen h-screen bg-[#3E0141] text-text-white`}
+      >
         <nav className="flex flex-col lg:ml-16">
           <div className="flex pr-5">
             <h2
@@ -111,5 +107,4 @@ export default function Header() {
       </div>
     </header>
   );
-};
-
+}

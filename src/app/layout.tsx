@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { sourceSans } from "./fonts";
-import Image from "next/image";
-import Header from "../components/Header";
+import type { Metadata } from 'next';
+import './globals.css';
+import { sourceSans } from './fonts';
+import Image from 'next/image';
+import Header from '../components/Header';
 
 export const metadata: Metadata = {
-  title: "Freelance Software Developer | Pramuditha Chamikara",
-  description: "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
+  title: 'Freelance Software Developer | Pramuditha Chamikara',
+  description:
+    "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
   openGraph: {
     title: 'Freelance Software Developer | Pramuditha Chamikara',
-    description: "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
+    description:
+      "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
     url: 'https://chamikaratdp.com',
     siteName: 'Pramuditha Chamikara',
     images: [
@@ -23,7 +25,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -53,9 +54,7 @@ export default function RootLayout({
                 <a href="tel:+94719939729">Tel: +94 719939729</a>
               </div>
               <div className="pt-2">
-                <a href="mailto:chamikaratdp@gmail.com">
-                  Email: chamikaratdp@gmail.com
-                </a>
+                <a href="mailto:chamikaratdp@gmail.com">Email: chamikaratdp@gmail.com</a>
               </div>
             </section>
 
