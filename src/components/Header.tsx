@@ -26,7 +26,7 @@ export default function Header() {
     >
       <nav className="flex justify-evenly items-center mt-5 w-full px-4 lg:px-10 xl:px-0 xl:w-4/5 2xl:w-3/5">
         <div className="hidden lg:block w-1/4">
-          <a className="hover:underline text-xl uppercase" href="/home">
+          <a className="hover:underline text-xl uppercase" href="/">
             home
           </a>
           <a

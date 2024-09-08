@@ -35,7 +35,7 @@ const projects = [
   {
     name: "OnCoor",
     description:
-      "OnCoor Inc, know for their robust and comprehensive data management platform, which offers data warehousing, validation, analytics and many other services. I helped them build thisexact system.",
+      "OnCoor Inc, know for their robust and comprehensive data management platform, which offers data warehousing, validation, analytics and many other services. I helped them build this exact system.",
     imageAlt: "screenshot showing form OnCoor web app",
     imagePath: "/images/oncoor.png",
     techStack:
@@ -87,10 +87,14 @@ function ProjectCard({ project }: any) {
           project.imageFirst ? "" : "lg:mr-20"
         }`}
       >
-        <h4 className={`${mulish.className} text-center text-3xl font-semibold`}>
+        <h4
+          className={`${mulish.className} text-center text-3xl font-semibold`}
+        >
           {project.name}
         </h4>
-        <p className="sm:text-center lg:text-left text-lg lg:text-xl mt-5">{project.description}</p>
+        <p className="sm:text-center lg:text-left text-lg lg:text-xl mt-5">
+          {project.description}
+        </p>
         <div className="mt-4 sm:text-center lg:text-left">
           <a
             className="text-lg text-text-secondary underline"
@@ -104,20 +108,19 @@ function ProjectCard({ project }: any) {
           Tasks Performed: {project.techStack}
         </h5>
 
-        
         {/* <div className="hidden lg:block w-[350px] h-[200px] absolute border-border-default border-r border-b -bottom-8 -right-10 -z-10"></div> */}
       </div>
 
       {!project.imageFirst && (
-          <div className="hidden lg:block shadow">
-            <Image
-              src="/images/hupe.png"
-              alt="screenshot showing form sujathas-anthurium website"
-              width={500}
-              height={280}
-            />
-          </div>
-        )}
+        <div className="hidden lg:block shadow">
+          <Image
+            src="/images/hupe.png"
+            alt="screenshot showing form sujathas-anthurium website"
+            width={500}
+            height={280}
+          />
+        </div>
+      )}
     </div>
   );
 }
