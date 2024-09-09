@@ -26,7 +26,8 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i
 
     return config
-  }
+  },
+  distDir: "build",
 };
 
 export default nextConfig;
