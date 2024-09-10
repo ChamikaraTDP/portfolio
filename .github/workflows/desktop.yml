@@ -18,6 +18,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - run: rm -r /home/chamikara/my-apps/github/portfolio
       - run: cp -r ${{ github.workspace }} /home/chamikara/my-apps/github
       - run: cd /home/chamikara/my-apps/github/portfolio
       - run: npm ci
