@@ -19,4 +19,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: cp -r ${{ github.workspace }} /home/chamikara/my-apps/github
+      - run: cd /home/chamikara/my-apps/github/portfolio
+      - run: npm ci
+      - run: npm run build
       - run: echo "🍏 This job's status is ${{ job.status }}."
