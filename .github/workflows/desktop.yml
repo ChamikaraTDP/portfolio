@@ -4,13 +4,9 @@ on:
   push:
     branches:
       - main
-defaults:
-  run:
-    shell: bash
-    working-directory: /home/chamikara/my-apps/github
 
 jobs:
-  Explore-GitHub-Actions:
+  Explore-Self-Hosted-Actions:
     runs-on: [self-hosted, linux, x64, desktop]
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -22,4 +18,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - run: cp ${{ github.workspace }} /home/chamikara/my-apps/github
       - run: echo "🍏 This job's status is ${{ job.status }}."
