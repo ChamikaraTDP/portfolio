@@ -1,12 +1,14 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Run Tests on GitHub Host
+run-name: ${{ github.actor }} is testing 🚀
 on:
-  push:
+  pull_request:
     branches:
       - release
+      - main
 jobs:
-  Explore-GitHub-Actions:
+  Run-Tests:
     runs-on: ubuntu-22.04
+    environment: Test
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -14,22 +16,34 @@ jobs:
       - name: Setup node environment
         uses: actions/setup-node@v4
         with:
-          node-version: 20.10
+          node-version: 20
       - run: echo "💡 Node has been installed to the runner."
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "💡 Installing npm dependencies."
       - run: npm ci
-      - run: echo "💡 npm dependencies has been installed to the runner."
+      - run: echo "💡 Running Eslint checks."
       - run: npm run lint
-      - run: echo "💡 Eslint checks completed."
+      - run: echo "💡 Copying  secrets."
+      - run: mkdir secrets
+      - run: touch ./secrets/private.pem
+      - run: touch ./secrets/public.pem
+      - run: echo "${{secrets.PRIVATE_KEY}}" >>  ./secrets/private.pem
+      - run: echo "${{secrets.PUBLIC_KEY}}" >> ./secrets/public.pem
+      - run: chmod a-wx,go-r ./secrets/private.pem ./secrets/public.pem
+      - run: echo "💡 Copying envs."
+      - run: touch .env.local
+      - run: echo -en "DB_USER=${{secrets.DB_USER}}\nDB_HOST=$${{vars.DB_HOST}}\nDB_PORT=${{vars.DB_PORT}}" >> .env.local
+      - run: echo "💡 Bulding..."
       - run: npm run build
-      - run: echo "💡 Build completed."
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: next-build-artifact
-          path: build # or path/to/artifact
+          name: Build-artifact
+          path: | # or path/to/artifact
+            ${{ github.workspace }}
+            !${{ github.workspace }}/node_modules
       - run: echo "🖥️ Artifacts uploaded."
       - name: List files in the repository
         run: |
