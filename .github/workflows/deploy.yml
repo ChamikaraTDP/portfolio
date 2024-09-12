@@ -40,7 +40,7 @@ jobs:
           DB_HOST: ${{vars.DB_HOST}}
           DB_PORT: ${{vars.DB_PORT}}
         run: echo -en "DB_USER=$DB_USER\nDB_HOST=$DB_HOST\nDB_PORT=$DB_PORT" >> .env.local
-      - run: echo "💡 Bulding..."
+      - run: echo "💡 Start Bulding."
       - run: npm run build
       - run: rm -r ${{ env.TARGET_DIR }}/${{ github.repository }}
       - run: cp -r ${{ github.workspace }} ${{ env.TARGET_DIR }}
