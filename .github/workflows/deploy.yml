@@ -44,7 +44,7 @@ jobs:
       - run: npm run build
       - run: rm -r ${{ env.TARGET_DIR }}/portfolio
       - run: cp -r ${{ github.workspace }} ${{ env.TARGET_DIR }}
-      - name: List files in ${{ env.TARGET_DIR }}/${{ github.repository }}
+      - name: List files in ${{ env.TARGET_DIR }}/portfolio
         run: |
-          ls -a ${{ env.TARGET_DIR }}/${{ github.repository }}
+          ls -a ${{ env.TARGET_DIR }}/portfolio
       - run: echo "🍏 This job's status is ${{ job.status }}."
