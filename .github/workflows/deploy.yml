@@ -23,17 +23,23 @@ jobs:
       - run: mkdir secrets
       - run: touch ./secrets/private.pem
       - run: touch ./secrets/public.pem
-      - run: echo "${{secrets.PRIVATE_KEY}}" >>  ./secrets/private.pem
-      - run: echo "${{secrets.PUBLIC_KEY}}" >> ./secrets/public.pem
+      - name: copy pvt
+        env: 
+          PVT_SCR:  ${{secrets.PRIVATE_KEY}}
+        run: echo "$PVT_SCR" >>  ./secrets/private.pem
+      - name: copy pub
+        env:
+          PUB_SCR: ${{secrets.PUBLIC_KEY}}
+        run: echo "$PUB_SCR" >> ./secrets/public.pem
       - run: chmod a-wx,go-r ./secrets/private.pem ./secrets/public.pem
       - run: echo "💡 Copying envs."
-      - run: touch env.local
-      - run: echo -en "DB_USER=${{secrets.DB_USER}}\nDB_HOST=$${{vars.DB_HOST}}\nDB_PORT=${{vars.DB_PORT}}" >> env.local
+      - run: touch .env.local
+      - run: echo -en "DB_USER=${{secrets.DB_USER}}\nDB_HOST=$${{vars.DB_HOST}}\nDB_PORT=${{vars.DB_PORT}}" >> .env.local
       - run: echo "💡 Bulding..."
       - run: npm run build
       - run: rm -r ${{ env.TARGET_DIR }}/${{ github.repository }}
       - run: cp -r ${{ github.workspace }} ${{ env.TARGET_DIR }}
       - name: List files in ${{ env.TARGET_DIR }}/${{ github.repository }}
         run: |
-          ls ${{ env.TARGET_DIR }}/${{ github.repository }}
+          ls -a ${{ env.TARGET_DIR }}/${{ github.repository }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
