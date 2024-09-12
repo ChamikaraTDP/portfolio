@@ -1,0 +1,39 @@
+name: Deploy to Server
+run-name: ${{ github.actor }} is deploying 🚀
+on:
+  push:
+    branches:
+      - release
+env:
+  TARGET_DIR: /home/chamikara/my-apps/github
+
+jobs:
+  Deploy-to-server:
+    runs-on: [self-hosted, linux, x64, desktop]
+    environment: Production
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by You!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: npm i
+      - run: echo "💡 Copying  secrets."
+      - run: mkdir secrets
+      - run: touch ./secrets/private.pem
+      - run: touch ./secrets/public.pem
+      - run: echo "${{secrets.PRIVATE_KEY}}" >>  ./secrets/private.pem
+      - run: echo "${{secrets.PUBLIC_KEY}}" >> ./secrets/public.pem
+      - run: chmod a-wx,go-r ./secrets/private.pem ./secrets/public.pem
+      - run: echo "💡 Copying envs."
+      - run: touch env.local
+      - run: echo -en "DB_USER=${{secrets.DB_USER}}\nDB_HOST=$${{vars.DB_HOST}}\nDB_PORT=${{vars.DB_PORT}}" >> env.local
+      - run: echo "💡 Bulding..."
+      - run: npm run build
+      - run: rm -r ${{ env.TARGET_DIR }}/${{ github.repository }}
+      - run: cp -r ${{ github.workspace }} ${{ env.TARGET_DIR }}
+      - name: List files in ${{ env.TARGET_DIR }}/${{ github.repository }}
+        run: |
+          ls ${{ env.TARGET_DIR }}/${{ github.repository }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
