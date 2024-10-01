@@ -3,6 +3,7 @@ import { lora, mulish } from './fonts';
 import ChevronLeftIcon from '@assets/chevron-left.svg';
 import ChevronRightIcon from '@assets/chevron-right.svg';
 import CtaForm from '../components/CtaForm';
+import ProjectCard from '../components/ProjectCard';
 
 const services = [
   {
@@ -36,12 +37,64 @@ const projects = [
     name: 'OnCoor',
     description:
       'OnCoor Inc, know for their robust and comprehensive data management platform, which offers data warehousing, validation, analytics and many other services. I helped them build this exact system.',
-    imageAlt: 'screenshot showing form OnCoor web app',
+    imageAlt: 'screenshot showing OnCoor web app',
     imagePath: '/images/oncoor.png',
-    techStack: 'Backend-Development, Frontent-Develpoment, Scripting and Hosting',
+    tasks: 'Backend-Development, Frontent-Develpoment, Scripting and Hosting',
     siteLink: 'https://oncoor.com',
     siteDisplay: 'oncoor.com',
     imageFirst: true,
+    techStack:
+      'Backend-Development, Frontent-Develpoment, Scripting and Hosting',
+    longDesc: (
+      <p>
+        OnCoor Inc, know for their robust and comprehensive data management
+        platform, which offers data warehousing, validation, analytics and many
+        other services. I helped them build this exact system. <br />
+        <br /> This was a long-term project. I spent 18 months working full time
+        on this. The platform consists of three applications working together.
+        Frontend web app (UI) where all the user interactions happen, which
+        build with React. Backend application which provides services to other
+        two applications. And the Data Processing unit where all the heavy
+        lifting data processing happens. <br />
+        <br /> In the Frontend (UI) I have created more than 100 different pages
+        and more than 20 different reusable components. These pages and
+        components address various user requirements. Chart drawings, custom
+        vector graphic drawings, PDF generation, PBI integrations and various
+        configuration pages, to name a few. Some of these pages require
+        real-time updates, to show details about currently executing jobs, as
+        well. <br />
+        <br /> Backend server application is where the Restful api services are
+        implemented. This application leverages NestJs framework features. I had
+        to maintain two different database connections (SqlServer and
+        Postgresql) and interact with various schemas created within them.
+        Instead of implementing CURD services for each and every resource
+        separately, I have created a set of reusable CURD services which reduced
+        the development time significantly. Other than the Rest apis backend
+        application consists of Error handling and reporting features, email
+        notification services and automated job scheduling services as well.
+        <br />
+        <br />
+        Data process is where job fetching, queuing and executing happens.Data
+        process is capable of handling streams of data from various data sources
+        and also monitors and reports each job execution. I had to assign each
+        job to its own separate process in order to increase performance and
+        make the job management easier.
+      </p>
+    ),
+    descImages: [
+      {
+        alt: 'screenshot 1 showing Oncoor web app',
+        path: '/images/projects/oncoor/oncoor-1.png',
+      },
+      {
+        alt: 'screenshot 2 showing Oncoor web app',
+        path: '/images/projects/oncoor/oncoor-2.png',
+      },
+      {
+        alt: 'screenshot 3 showing Oncoor web app',
+        path: '/images/projects/oncoor/oncoor-3.png',
+      },
+    ],
   },
   {
     name: 'Hupe',
@@ -49,10 +102,44 @@ const projects = [
       'Web app developed for the company Hupe Lifestyle Coaching, as part of their health and wellness optimization program. This platform brings data from various different wearable devices into one single interface. I helped them create frontend elements in their Next.Js application.',
     imageAlt: 'screenshot showing form Hupe website',
     imagePath: '/images/hupe.png',
-    techStack: 'Frontent-Develpoment, Image and Content Optimization',
+    tasks: 'Frontent-Develpoment, Image and Content Optimization',
     siteLink: 'https://hupe.life',
     siteDisplay: 'hupe.life',
     imageFirst: false,
+    techStack: 'Frontent-Develpoment, Image and Content Optimization',
+    longDesc: (
+      <p>
+        Web app developed for the company Hupe Lifestyle Coaching, as part of
+        their health and wellness optimization program. This platform brings
+        data from various different wearable devices into one single interface.
+        I helped them create frontend elements in their Next.Js application.
+        <br />
+        <br /> Here I worked with the frontend team. Client put much focus on
+        visuals and look and feel of the application and stresses on pixel
+        perfect design and seamless responsiveness. So we put much effort and
+        care for every little detail in every design element. Had to integrate
+        various different wearable devices into the system to gather data and
+        visualize them in an appealing manner. We used charts and different grid
+        elements for that. <br />
+        <br /> Showing stunning visuals and animations without losing
+        application performance is a difficult task. But techniques we used like
+        server-side rendering and static-site rendering made it possible.
+      </p>
+    ),
+    descImages: [
+      {
+        alt: 'screenshot 1 showing HUPE web app',
+        path: '/images/projects/hupe/hupe-1.png',
+      },
+      {
+        alt: 'screenshot 2 showing HUPE web app',
+        path: '/images/projects/hupe/hupe-2.png',
+      },
+      {
+        alt: 'screenshot 3 showing HUPE web app',
+        path: '/images/projects/hupe/hupe-3.png',
+      },
+    ],
   },
   {
     name: "Sujatha's Anthurium",
@@ -60,60 +147,48 @@ const projects = [
       'This website was build for a local florist who specialized in Anthurium. Website showcases their products and services and highlight their expertise in the field.',
     imageAlt: 'screenshot showing form sujathas-anthurium website',
     imagePath: '/images/sujathas-anthurium.png',
-    techStack: 'Web Design, Frontend-Development, Hosting and Maintenance',
+    tasks: 'Web Design, Frontend-Development, Hosting and Maintenance',
     siteLink: 'https://sujathasanthurium.com',
     siteDisplay: 'sujathasanthurium.com',
     imageFirst: true,
+    techStack: 'Web Design, Frontend-Development, Hosting and Maintenance',
+    longDesc: (
+      <p>
+        This website was build for a local florist who specialized in Anthurium.
+        Website showcases their products and services and highlight their
+        expertise in the field. <br />
+        <br /> Client required a simple yet elegant design to showcase their
+        anthurium collection. They also requested a space for their blog posts.
+        In this project I did all the work from designing to marketing. I used a
+        mobile first approach for the design and made sure to utilize every
+        screen size as much as possible. Making the plants and flowers appealing
+        to customers was the main goal. <br />
+        <br /> Improving load times using image optimizations and static-site
+        rendering, enhancing site discoverability using search engine
+        optimization techniques, nginx server setup are some other tasks that I
+        took care of.
+      </p>
+    ),
+    descImages: [
+      {
+        alt: 'screenshot 1 showing form sujathas-anthurium website',
+        path: '/images/projects/sujathas-anthurium/sujathas-anthurium-1.png',
+      },
+      {
+        alt: 'screenshot 2 showing form sujathas-anthurium website',
+        path: '/images/projects/sujathas-anthurium/sujathas-anthurium-2.png',
+      },
+      {
+        alt: 'screenshot 3 showing form sujathas-anthurium website',
+        path: '/images/projects/sujathas-anthurium/sujathas-anthurium-3.png',
+      },
+    ],
   },
 ];
 
-function ProjectCard({ project }: any) {
-  return (
-    <div className="flex justify-center lg:items-center flex-wrap lg:flex-nowrap sm:px-5 mb-10 sm:mb-20 lg:mb-[100px]">
-      <div className={`${project.imageFirst ? 'lg:mr-20' : 'lg:hidden'} shadow`}>
-        <Image src={project.imagePath} alt={project.imageAlt} width={500} height={280} />
-      </div>
-
-      <div
-        className={`mt-5 md:w-4/5 lg:w-[500px] text-left relative px-2 ${
-          project.imageFirst ? '' : 'lg:mr-20'
-        }`}
-      >
-        <h4 className={`${mulish.className} text-center text-3xl font-semibold`}>{project.name}</h4>
-        <p className="sm:text-center lg:text-left text-lg lg:text-xl mt-5">{project.description}</p>
-        <div className="mt-4 sm:text-center lg:text-left">
-          <a
-            className="text-lg text-text-secondary underline"
-            href={project.siteLink}
-            target="_blank"
-          >
-            {project.siteDisplay}
-          </a>
-        </div>
-        <h5 className="text-text-secondary mt-4 sm:text-center lg:text-left">
-          Tasks Performed: {project.techStack}
-        </h5>
-
-        {/* <div className="hidden lg:block w-[350px] h-[200px] absolute border-border-default border-r border-b -bottom-8 -right-10 -z-10"></div> */}
-      </div>
-
-      {!project.imageFirst && (
-        <div className="hidden lg:block shadow">
-          <Image
-            src="/images/hupe.png"
-            alt="screenshot showing form sujathas-anthurium website"
-            width={500}
-            height={280}
-          />
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <section className="relative h-[545px]">
         <Image
           src="/images/Screenshot from 2024-05-07 00-02-11.v06.png"
@@ -124,7 +199,9 @@ export default function Home() {
         />
 
         <div className="absolute bottom-0 text-center text-text-white w-full">
-          <h1 className={`${lora.className} text-4xl md:text-5xl lg:text-6xl font-bold mb-10`}>
+          <h1
+            className={`${lora.className} text-4xl md:text-5xl lg:text-6xl font-bold mb-10`}
+          >
             Web and Mobile
             <br />
             Development
@@ -132,8 +209,9 @@ export default function Home() {
 
           <div className="flex justify-center">
             <h3 className="text-lg md:text-2xl font-semibold my-5 w-4/5 lg:w-3/5 2xl:w-1/2">
-              Hi, I&apos;m a freelance software developer, creating meaningful solutions that help
-              businesses to drive their business efforts forward.
+              Hi, I&apos;m a freelance software developer, creating meaningful
+              solutions that help businesses to drive their business efforts
+              forward.
             </h3>
           </div>
 
@@ -171,7 +249,9 @@ export default function Home() {
                     <Image src={srv.iconPath} alt="creativity Icon" fill />
                   </div>
 
-                  <h4 className="text-3xl font-semibold md:mt-10 ml-5 md:ml-0">{srv.name}</h4>
+                  <h4 className="text-3xl font-semibold md:mt-10 ml-5 md:ml-0">
+                    {srv.name}
+                  </h4>
                 </div>
 
                 <p className="md:text-lg font-medium mt-4 md:mt-8 text-text-secondary">
@@ -219,11 +299,14 @@ export default function Home() {
 
           <div className="items-center md:px-20">
             <p className="text-lg">
-              Chamikara&apos;s hard work, professionalism, and commitment have been invaluable to
-              our team, and we are grateful for the positive impact he have made.
+              Chamikara&apos;s hard work, professionalism, and commitment have
+              been invaluable to our team, and we are grateful for the positive
+              impact he have made.
             </p>
 
-            <h4 className="text font-bold mt-8">Jamir Shaikh - Founder & CEO OnCoor Inc</h4>
+            <h4 className="text font-bold mt-8">
+              Jamir Shaikh - Founder & CEO OnCoor Inc
+            </h4>
           </div>
 
           <div className="hidden text-text-secondary shrink-0 w-[60px] h-[60px] rounded-full bg-white lg:flex justify-center items-center hover:bg-button-focus hover:text-white hover:cursor-pointer">

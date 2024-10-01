@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is deploying 🚀
 on:
   push:
     branches:
-      - release
+      - no-run
 env:
   TARGET_DIR: /home/chamikara/my-apps/github
   REPO_NAME: portfolio
