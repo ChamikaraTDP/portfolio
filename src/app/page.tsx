@@ -191,7 +191,7 @@ export default function Home() {
     <main>
       <section className="relative h-[545px]">
         <Image
-          src="/images/Screenshot from 2024-05-07 00-02-11.v06.png"
+          src="/images/code-editor-purple-blurred.png"
           quality={100}
           alt="Screenshot of my code editor"
           fill
