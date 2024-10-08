@@ -78,7 +78,7 @@ export default function Header() {
             />
           </div>
           <div className="ml-16 px-4 py-4">
-            <a className="hover:underline text-2xl uppercase" href="/home">
+            <a className="hover:underline text-2xl uppercase" href="/">
               home
             </a>
           </div>
