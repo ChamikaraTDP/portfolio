@@ -6,7 +6,7 @@ import CustomCarousel from './carousel/CustomCarousel';
 export default function ProjectDetailModel({ project, onClickClose }: any) {
   return (
     <div className="fixed z-50 top-0 left-0 w-screen h-screen bg-[#5f4c725f] flex items-center justify-center py-12 lg:py-0">
-      <div className="w-11/12 xl:w-3/4 2xl:w-2/3 max-h-full bg-background-default p-2 lg:p-4 relative overflow-auto">
+      <div className="w-11/12 xl:w-3/4 2xl:w-2/3 max-h-full bg-background-default p-2 lg:p-4 relative overflow-auto border border-border-secondary outline-dashed outline-2 outline-offset-2">
         <div className="absolute right-2 lg:right-4 cursor-pointer" onClick={onClickClose}>
           <Image
             src={'/icons/cross.svg'}
@@ -35,6 +35,13 @@ export default function ProjectDetailModel({ project, onClickClose }: any) {
           </div>
 
           <div className="basis-2/5 p-2 pt-4 lg:p-0 lg:h-[400px] xl:h-[480px] overflow-auto text-left">
+            Tasks performed: {project.tasks}
+            <br />
+            <br />
+            Tools used: <b>{project.techStack.join(', ')}</b>
+            <br />
+            <br />
+
             {project.longDesc}
           </div>
         </div>

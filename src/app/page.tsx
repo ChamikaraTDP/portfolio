@@ -43,8 +43,20 @@ const projects = [
     siteLink: 'https://oncoor.com',
     siteDisplay: 'oncoor.com',
     imageFirst: true,
-    techStack:
-      'Backend-Development, Frontent-Develpoment, Scripting and Hosting',
+    techStack: [
+      'Typescript',
+      'React.js',
+      'NestJS',
+      'NodeJs',
+      'Objection.js',
+      'Redux',
+      'Konva.js',
+      'Axios',
+      'Google-Charts',
+      'MaterialUI',
+      'Vite',
+      'Eslint',
+    ],
     longDesc: (
       <p>
         OnCoor Inc, know for their robust and comprehensive data management
@@ -74,7 +86,7 @@ const projects = [
         notification services and automated job scheduling services as well.
         <br />
         <br />
-        Data process is where job fetching, queuing and executing happens.Data
+        Data process is where job fetching, queuing and executing happens. Data
         process is capable of handling streams of data from various data sources
         and also monitors and reports each job execution. I had to assign each
         job to its own separate process in order to increase performance and
@@ -106,7 +118,16 @@ const projects = [
     siteLink: 'https://hupe.life',
     siteDisplay: 'hupe.life',
     imageFirst: false,
-    techStack: 'Frontent-Develpoment, Image and Content Optimization',
+    techStack: [
+      'Typescript',
+      'React.js',
+      'Next.js',
+      'Tailwindcss',
+      'Chart.js',
+      'Zustand',
+      'Axios',
+      'Eslint',
+    ],
     longDesc: (
       <p>
         Web app developed for the company Hupe Lifestyle Coaching, as part of
@@ -151,7 +172,15 @@ const projects = [
     siteLink: 'https://sujathasanthurium.com',
     siteDisplay: 'sujathasanthurium.com',
     imageFirst: true,
-    techStack: 'Web Design, Frontend-Development, Hosting and Maintenance',
+    techStack: [
+      'Typescript',
+      'React.js',
+      'Next.js',
+      'Tailwindcss',
+      'Axios',
+      'Formik',
+      'Eslint',
+    ],
     longDesc: (
       <p>
         This website was build for a local florist who specialized in Anthurium.
