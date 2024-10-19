@@ -55,6 +55,7 @@ export default function ProjectCard({ project }: any) {
             className="text-lg text-text-secondary underline"
             href={project.siteLink}
             target="_blank"
+            rel="nofollow"
           >
             {project.siteDisplay}
           </a>
