@@ -2,6 +2,7 @@
 
 I share insights about my past work and share the knowledge acquired through them.
 
+hosted on: [chamikaratdp.com](https://chamikaratdp.com/)
 
 
 ### Environment
