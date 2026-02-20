@@ -51,7 +51,7 @@ export default function RootLayout({
                 Kiriwattuduwa, Horana, Sri Lanka
               </div>
               <div className="pt-2">
-                <a href="tel:+94719939729">Tel: +94 719939729</a>
+                <a href="tel:+94719939729">Tel: +94 741280274</a>
               </div>
               <div className="pt-2">
                 <a href="mailto:chamikaratdp@gmail.com">Email: chamikaratdp@gmail.com</a>

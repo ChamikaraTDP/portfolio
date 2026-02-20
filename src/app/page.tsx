@@ -59,7 +59,7 @@ const projects = [
     ],
     longDesc: (
       <p>
-        OnCoor Inc, know for their robust and comprehensive data management
+        OnCoor Inc, known for their robust and comprehensive data management
         platform, which offers data warehousing, validation, analytics and many
         other services. I helped them build this exact system. <br />
         <br /> This was a long-term project. I spent 18 months working full time
@@ -238,9 +238,7 @@ export default function Home() {
 
           <div className="flex justify-center">
             <h3 className="text-lg md:text-2xl font-semibold my-5 w-4/5 lg:w-3/5 2xl:w-1/2">
-              Hi, I&apos;m a freelance software developer, creating meaningful
-              solutions that help businesses to drive their business efforts
-              forward.
+             Software Engineer | Building scalable solutions that accelerate business growth
             </h3>
           </div>
 

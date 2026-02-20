@@ -33,7 +33,7 @@ export default function About() {
     <main className="">
       <section className="relative h-[545px]">
         <Image
-          src="/images/chamikara-at-work.v01.png"
+          src="/images/chamikara-in-full-suite.png"
           quality={100}
           alt="Screenshot of my code editor"
           fill
@@ -132,7 +132,7 @@ export default function About() {
           <div className="flex">
             <div className="p-4 basis-1/2 bg-white">
               <div className="font-bold">CI/CD</div>
-              <div>GitHub&nbsp;Actions</div>
+              <div>GitHub&nbsp;Actions, Docker</div>
             </div>
 
             <div className="p-4 basis-1/2 bg-background-secondary">
@@ -144,7 +144,7 @@ export default function About() {
           <div className="flex">
             <div className="p-4 basis-1/2 bg-background-secondary">
               <div className="font-bold">CSS Frameworks</div>
-              <div>Tailwind, Material&nbsp;UI, Bulma</div>
+              <div>Tailwindcss, Material&nbsp;UI, Bulma</div>
             </div>
 
             <div className="p-4 basis-1/2 bg-white">
