@@ -5,13 +5,13 @@ import Image from 'next/image';
 import Header from '../components/Header';
 
 export const metadata: Metadata = {
-  title: 'Freelance Software Developer | Pramuditha Chamikara',
+  title: 'Software Engineer | Pramuditha Chamikara',
   description:
-    "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
+    "Software Engineer | Building scalable solutions that accelerate business growth",
   openGraph: {
-    title: 'Freelance Software Developer | Pramuditha Chamikara',
+    title: 'Software Engineer | Pramuditha Chamikara',
     description:
-      "I'm a freelance software developer, creating meaningful solutions that help businesses to drive their business efforts forward.",
+      "Software Engineer | Building scalable solutions that accelerate business growth",
     url: 'https://chamikaratdp.com',
     siteName: 'Pramuditha Chamikara',
     images: [

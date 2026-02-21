@@ -75,8 +75,7 @@ export default function About() {
             projects this was my first successful venture. After the training,
             while continuing the studies, I started to give side support for a
             freelancer. I learned much about freelancing from him. After
-            graduating I worked full time for a few companies until I decided to
-            start working as a freelancer. <br /> <br /> I like to talk with
+            graduating I worked full time for a few companies. <br /> <br /> I like to talk with
             clients, understand their businesses and be involved as it is my
             own. I also enjoy learning new tools and technologies and understand
             what problems they solve and for what specific use case they are

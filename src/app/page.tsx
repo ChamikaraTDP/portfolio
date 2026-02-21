@@ -1,110 +1,98 @@
 import Image from 'next/image';
 import { lora, mulish } from './fonts';
-import ChevronLeftIcon from '@assets/chevron-left.svg';
-import ChevronRightIcon from '@assets/chevron-right.svg';
 import CtaForm from '../components/CtaForm';
 import ProjectCard from '../components/ProjectCard';
 
-const services = [
+const mainStack = [
   {
-    name: 'Design',
-    iconPath: '/icons/creativity.png',
-    description:
-      'A good website is one that displays a careful balance between appearance and functionality. It can help you create a compelling and powerful first impression, turning visitors into paying customers.',
+    name: 'React',
+    iconPath: '/icons/react.svg',
   },
   {
-    name: 'Development',
-    iconPath: '/icons/software.png',
-    description:
-      'Fast and reliable development experience that makes the ends meet. Whether it is a simple website or complex web/mobile app I got you covered.',
+    name: 'NestJs',
+    iconPath: '/icons/nestjs.svg',
   },
   {
-    name: 'SEO',
-    iconPath: '/icons/seo.png',
-    description:
-      'Search Engine Optimization is important for your sites visibility in search results. Good SEO make sure your potential clients find you when they really need you.',
+    name: 'NextJs',
+    iconPath: '/icons/nextjs.svg',
   },
   {
-    name: 'Marketing',
-    iconPath: '/icons/search-engine.png',
-    description:
-      'Generate leads and boost sales with paid advertisements, social media marketing, email marketing and many other strategies.',
+    name: 'React Native',
+    iconPath: '/icons/react.svg',
+  },
+  {
+    name: 'PostgreSQL',
+    iconPath: '/icons/postgresql.svg',
+  },
+  {
+    name: 'Azure',
+    iconPath: '/icons/microsoft-azure.png',
   },
 ];
 
 const projects = [
   {
-    name: 'OnCoor',
+    name: 'DFAR Inventory',
     description:
-      'OnCoor Inc, know for their robust and comprehensive data management platform, which offers data warehousing, validation, analytics and many other services. I helped them build this exact system.',
-    imageAlt: 'screenshot showing OnCoor web app',
-    imagePath: '/images/oncoor.png',
+      'Custom inventory system that can manage resources in multiple locations. Project originally designed for the Department of Fisheries and Aquatic resources, Sri Lanka.',
+    imageAlt: 'screenshot showing DFAR Inventory web app',
+    imagePath: '/images/dfar-inventory.png',
     tasks: 'Backend-Development, Frontent-Develpoment, Scripting and Hosting',
-    siteLink: 'https://oncoor.com',
-    siteDisplay: 'oncoor.com',
+    siteLink: '',
+    siteDisplay: '',
     imageFirst: true,
     techStack: [
-      'Typescript',
-      'React.js',
-      'NestJS',
-      'NodeJs',
-      'Objection.js',
-      'Redux',
-      'Konva.js',
-      'Axios',
-      'Google-Charts',
-      'MaterialUI',
-      'Vite',
-      'Eslint',
+      'Laravel',
+      'Vue.js',
+      'PHP',
+      'Javascript',
+      'HTML',
+      'CSS',
+      'Bulma',
+      'jsPDF',
+      'MySQL',
     ],
     longDesc: (
-      <p>
-        OnCoor Inc, known for their robust and comprehensive data management
-        platform, which offers data warehousing, validation, analytics and many
-        other services. I helped them build this exact system. <br />
-        <br /> This was a long-term project. I spent 18 months working full time
-        on this. The platform consists of three applications working together.
-        Frontend web app (UI) where all the user interactions happen, which
-        build with React. Backend application which provides services to other
-        two applications. And the Data Processing unit where all the heavy
-        lifting data processing happens. <br />
-        <br /> In the Frontend (UI) I have created more than 100 different pages
-        and more than 20 different reusable components. These pages and
-        components address various user requirements. Chart drawings, custom
-        vector graphic drawings, PDF generation, PBI integrations and various
-        configuration pages, to name a few. Some of these pages require
-        real-time updates, to show details about currently executing jobs, as
-        well. <br />
-        <br /> Backend server application is where the Restful api services are
-        implemented. This application leverages NestJs framework features. I had
-        to maintain two different database connections (SqlServer and
-        Postgresql) and interact with various schemas created within them.
-        Instead of implementing CURD services for each and every resource
-        separately, I have created a set of reusable CURD services which reduced
-        the development time significantly. Other than the Rest apis backend
-        application consists of Error handling and reporting features, email
-        notification services and automated job scheduling services as well.
+      <div>
+        The Department of Fisheries and Aquatic Resources (DFAR) of Sri Lanka is
+        oversees the management and regulation of marine fisheries in the
+        country. <br />
+        <br /> This inventory developed for their internal use; to replace old
+        ledgers. <br />
         <br />
-        <br />
-        Data process is where job fetching, queuing and executing happens. Data
-        process is capable of handling streams of data from various data sources
-        and also monitors and reports each job execution. I had to assign each
-        job to its own separate process in order to increase performance and
-        make the job management easier.
-      </p>
+        Key Features,
+        <ul className="list-disc pl-5">
+          <li>Separate account for each location(station)</li>
+          <li>Multiple user accounts for each station</li>
+          <li>Real-Time inventory tracking</li>
+          <li>
+            Manage life-cycle of long-lived items (eg:- Tables, special process
+            for adding/removing items)
+          </li>
+          <li>Manage items that can be issued in bulk (eg:- A4 Sheets)</li>
+          <li>Generate PDF documents for every transaction</li>
+          <li>Search, Filter, Ordering features</li>
+          <li>Ability to view all past transactions</li>
+          <li>
+            Ability to generate reports for a desired time frame and save them
+            as PDF documents
+          </li>
+          <li>Feature rich Admin panel</li>
+        </ul>
+      </div>
     ),
     descImages: [
       {
-        alt: 'screenshot 1 showing Oncoor web app',
-        path: '/images/projects/oncoor/oncoor-1.png',
+        alt: 'screenshot 1 showing DFAR Inventory web app',
+        path: '/images/projects/dfar/dfar-inventory-1.png',
       },
       {
-        alt: 'screenshot 2 showing Oncoor web app',
-        path: '/images/projects/oncoor/oncoor-2.png',
+        alt: 'screenshot 2 showing DFAR Inventory web app',
+        path: '/images/projects/dfar/dfar-inventory-2.png',
       },
       {
-        alt: 'screenshot 3 showing Oncoor web app',
-        path: '/images/projects/oncoor/oncoor-3.png',
+        alt: 'screenshot 3 showing DFAR Inventory web app',
+        path: '/images/projects/dfar/dfar-inventory-3.png',
       },
     ],
   },
@@ -238,7 +226,8 @@ export default function Home() {
 
           <div className="flex justify-center">
             <h3 className="text-lg md:text-2xl font-semibold my-5 w-4/5 lg:w-3/5 2xl:w-1/2">
-             Software Engineer | Building scalable solutions that accelerate business growth
+              Software Engineer | Building scalable solutions that accelerate
+              business growth
             </h3>
           </div>
 
@@ -257,44 +246,7 @@ export default function Home() {
         <h2
           className={`${lora.className} text-3xl md:text-4xl font-medium capitalize text-title-primary`}
         >
-          grow your business with me
-        </h2>
-
-        <h3 className="text-xl md:text-2xl font-semibold text-title-primary mt-5">
-          Here are few ways I can help
-        </h3>
-
-        <div className="flex justify-center sm:px-5 mt-10 md:mt-20">
-          <div className="flex justify-center flex-wrap gap-2 md:gap-5">
-            {services.map((srv) => (
-              <div
-                key={srv.name}
-                className="bg-white shadow hover:shadow-[#DF5EFF80] w-full md:w-[300px] rounded-br-2xl py-6 md:py-10 px-10 text-left"
-              >
-                <div className="flex items-center md:flex-col md:items-start">
-                  <div className="relative object-contain w-[60px] h-[60px] md:w-[80px] md:h-[80px]">
-                    <Image src={srv.iconPath} alt="creativity Icon" fill />
-                  </div>
-
-                  <h4 className="text-3xl font-semibold md:mt-10 ml-5 md:ml-0">
-                    {srv.name}
-                  </h4>
-                </div>
-
-                <p className="md:text-lg font-medium mt-4 md:mt-8 text-text-secondary">
-                  {srv.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="text-center mt-12 px-4 md:mt-20 py-2 md:py-5">
-        <h2
-          className={`${lora.className} text-3xl md:text-4xl font-medium capitalize text-title-primary`}
-        >
-          Look how I helped
+          My Work
         </h2>
 
         <h3 className="text-xl md:text-2xl font-semibold text-title-primary mt-5">
@@ -308,38 +260,123 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center text-center mt-20 py-20 bg-background-secondary">
+      <section className="flex flex-col items-center text-center mt-20 py-20 bg-[#F8FBCD]">
         <h2
-          className={`${lora.className} text-3xl md:text-4xl font-medium capitalize text-title-primary`}
+          className={`${lora.className} px-2 text-2xl sm:text-3xl md:text-4xl font-medium capitalize text-title-primary`}
         >
-          hear from my past clients
+          Technology stack I&apos;m Familiar with
         </h2>
 
-        <h3 className="text-xl md:text-2xl font-semibold text-title-primary mt-5">
-          Don&apos;t take my word for it
+        <div className="mt-16 w-11/12 sm:w-4/5 2xl:w-3/5 flex justify-between flex-wrap md:flex-nowrap">
+          {mainStack.map((stackItem) => (
+            <div
+              key={stackItem.name}
+              className="p-4 flex flex-col items-center"
+            >
+              <div className="relative h-[60px] w-[60px] sm:h-[80px] sm:w-[80px] xl:h-[120px] xl:w-[120px]">
+                <Image
+                  src={stackItem.iconPath}
+                  fill={true}
+                  alt={`${stackItem.name} icon`}
+                />
+              </div>
+
+              <h4 className="mt-5 sm:text-lg xl:text-2xl">{stackItem.name}</h4>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-14 text-center">
+        <h3 className="text-xl md:text-2xl font-semibold text-title-primary mt-5 px-2">
+          Other than the main stack listed above, I&apos;m well versed in
+          following
         </h3>
 
-        <div className="mt-16 w-4/5 md:w-3/5 flex justify-between items-center">
-          <div className="hidden text-text-secondary shrink-0 w-[60px] h-[60px] rounded-full bg-white lg:flex justify-center items-center hover:bg-button-focus hover:text-white hover:cursor-pointer">
-            <ChevronLeftIcon />
+        <div className="mx-auto mt-10 w-11/12 md:w-4/5 lg:w-3/5 text-left">
+          <div className="flex">
+            <div className="p-4 basis-1/2 bg-background-secondary">
+              <div className="font-bold">Languages/Frameworks</div>
+              <div>TypeScript, Javascript, NodeJs, Laravel</div>
+            </div>
+
+            <div className="p-4 basis-1/2 bg-white">
+              <div className="font-bold">DBMS</div>
+              <div>MySQL, Ms-Sql-Server, SQLite</div>
+            </div>
           </div>
 
-          <div className="items-center md:px-20">
-            <p className="text-lg">
-              Chamikara&apos;s hard work, professionalism, and commitment have
-              been invaluable to our team, and we are grateful for the positive
-              impact he have made.
-            </p>
+          <div className="flex">
+            <div className="p-4 basis-1/2 bg-white">
+              <div className="font-bold">CI/CD</div>
+              <div>GitHub&nbsp;Actions, Azure&nbsp;pipelines, Docker</div>
+            </div>
 
-            <h4 className="text font-bold mt-8">
-              Jamir Shaikh - Founder & CEO OnCoor Inc
-            </h4>
+            <div className="p-4 basis-1/2 bg-background-secondary">
+              <div className="font-bold">Packages/Techniques</div>
+              <div>
+                Transact&nbsp;Query, Redux, Axios, JWT&nbsp;Authentication,
+                REST&nbsp;API
+              </div>
+            </div>
           </div>
 
-          <div className="hidden text-text-secondary shrink-0 w-[60px] h-[60px] rounded-full bg-white lg:flex justify-center items-center hover:bg-button-focus hover:text-white hover:cursor-pointer">
-            <ChevronRightIcon />
+          <div className="flex">
+            <div className="p-4 basis-1/2 bg-background-secondary">
+              <div className="font-bold">CSS Frameworks</div>
+              <div>Tailwindcss, Material&nbsp;UI, Bulma</div>
+            </div>
+
+            <div className="p-4 basis-1/2 bg-white">
+              <div className="font-bold">Testing</div>
+              <div>WebDriverIO, Jest</div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section className="mt-20 py-20 text-center bg-white">
+        <h2
+          className={`${lora.className} text-2xl sm:text-3xl md:text-4xl font-medium capitalize text-title-primary px-4`}
+        >
+          Education
+        </h2>
+
+        <div className="">
+          <div className="mx-auto pl-4 w-11/12 md:w-4/5 xl:w-3/5">
+            <div className=" mt-10">
+              <div className="text-xl md:text-2xl">
+                Bachelor of Science in Computer Science (2017-2021)
+              </div>
+              <div className="md:text-lg">
+                at University of Jaffna, Sri Lanka
+              </div>
+            </div>
+
+            <div className=" mt-10">
+              <div className="text-xl md:text-2xl">
+                Algorithms on Graphs (Certificate Course)
+              </div>
+              <div className="md:text-lg">
+                at University of California San Diego, Coursera
+              </div>
+            </div>
+
+            <div className=" mt-10">
+              <div className="text-xl md:text-2xl">
+                Certificate in English for higher education and employment
+              </div>
+              <div className="md:text-lg">at Sri Palee Campus, Sri Lanka</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-20 py-20 text-center">
+        <h3 className="md:text-xl font-semibold text-gray-600 mx-auto pl-4 w-11/12 md:w-4/5 lg:w-3/5 xl:w-1/2">
+          I post technical content on my blog and share useful stuff on twitter.
+          Please check them out If you’re interested. Thank you for your time!
+        </h3>
       </section>
 
       <section className="mt-12 md:mt-20 pt-10 flex items-center flex-col px-3">

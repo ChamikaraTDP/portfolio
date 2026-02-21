@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: any) {
         }`}
       >
         <h4
-          className={`${mulish.className} text-center text-3xl font-semibold cursor-pointer`}
+          className={`${mulish.className} text-3xl font-semibold cursor-pointer`}
           onClick={() => setIsOpenModel(true)}
         >
           {project.name}
