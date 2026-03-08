@@ -41,9 +41,9 @@ export default function Header() {
         </h2>
 
         <div className="hidden lg:block text-end w-1/4">
-          <a className="hover:underline text-xl uppercase mr-5 lg:mr-10" href="/about">
+          {/* <a className="hover:underline text-xl uppercase mr-5 lg:mr-10" href="/about">
             about
-          </a>
+          </a> */}
           <a
             className="text-xl uppercase py-2 px-6 border border-border-secondary hover:bg-button-focus hover:border-2 hover:px-[23px]"
             href="#lets-start"
@@ -89,11 +89,11 @@ export default function Header() {
             </a>
           </div>
 
-          <div className="ml-16 px-4 py-4">
+          {/* <div className="ml-16 px-4 py-4">
             <a className="hover:underline text-2xl uppercase" href="/about">
               about
             </a>
-          </div>
+          </div> */}
 
           <div className="mt-10 ml-16">
             <a

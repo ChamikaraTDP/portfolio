@@ -374,7 +374,11 @@ export default function Home() {
 
       <section className="mt-20 py-20 text-center">
         <h3 className="md:text-xl font-semibold text-gray-600 mx-auto pl-4 w-11/12 md:w-4/5 lg:w-3/5 xl:w-1/2">
-          I post technical content on my blog and share useful stuff on twitter.
+          I post technical content on my 
+          <a className="hover:underline pl-1 pr-1" href="/blog">
+            blog
+          </a> 
+          and share useful stuff on twitter.
           Please check them out If you’re interested. Thank you for your time!
         </h3>
       </section>
